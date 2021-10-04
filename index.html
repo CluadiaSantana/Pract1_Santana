@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ITESO NEWS APP</title>
+    <link rel="stylesheet" href="styles/styles.css">
+</head>
+<body>
+<section>
+    <h1 class="titletext">ITESO News App</h1>
+    <form >
+        <div >
+            <label for="searchbar"></label>
+            <input id="searchbar" class="form-control backbackPrimary" placeholder="SEARCH">
+            <button id="button-search">BUSCAR</button>
+        </div>
+    </form>
+    <h5 class="titletext">This project depends on <a class="nav-link" id="linknews" href="https://newsapi.org/" target="_blank"> News Api </a> a simple 
+        HTTP REST API for searching and retreiveing live articles from all over the web </h5>
+</section>
+<div id="news" class="grid " >
+    <div class="news-item col-12 col-md-6 col-lg-3">
+        <img src="https://media.wired.com/photos/6140fc8b6ab67fe10ebfff7f/191:100/w_1280,c_limit/Gear-Apple_watch-series7_hero_09142021.jpg" class="image"/>
+        <h2>Everything Apple Announced Today: iPhones, iPads, Apple Watch</h2>
+        <p>The company unveiled the iPhone 13—and a handful of other products—at a media event Tuesday.</p>
+        <a href="https://www.wired.com/story/everything-apple-announced-september-2021/" class="vermas" target="_blank">Ver más</a>
+    </div>
+    <div class="news-item col-12 col-md-6 col-lg-3">
+        <img src="https://lh3.googleusercontent.com/proxy/8WaPn-C1Xe_kq7iBnw2TDYEE7ASklDUJrBYxOsRQ924O9LtWEbVp2AyepKCFCSfJYqNPT0XYrtLsV5nXjFliPZwb2NEFXLp-pNoIm9XQJ7DodHF4iOarjuH-7DSCZhjpdyHyjDBGwPjXRO6T2rMvImlvMOdfFFmQ&#x3D;w1200-h630-p-k-no-nu" class="image"/>
+        <h2>Apple TV+ Guide: Here are all the Apple TV shows and movies available now</h2>
+        <p>Apple TV+ offers exclusive Apple original TV shows and movies in 4K HDR quality. You can watch across all of your screens and pick up where you left off on any device. Apple TV+ costs $4.99 per month. Here’s every Apple original television show and movie avai…</p>
+        <a href="https://techncruncher.blogspot.com/2021/09/apple-tv-guide-here-are-all-apple-tv.html" target="_blank">Ver más</a>
+    </div>
+    <div class="news-item col-12 col-md-6 col-lg-3">
+        <img src="https://techcrunch.com/wp-content/uploads/2021/09/Screen-Shot-2021-09-14-at-1.23.17-PM.jpg?w&#x3D;712" class="image"/>
+        <h2>Apple Watch will now detect biking workouts, falls from bike when riding</h2>
+        <p>Apple Watch users who ride bikes will get a handful of new features designed just for them. Announced during today’s Apple iPhone press event, the company says that Apple Watch will now begin to detect when users begin a bike ride to remind you to start a wor…</p>
+        <a href="http://techcrunch.com/2021/09/14/apple-watch-will-now-detect-biking-workouts-falls-from-bike-when-riding/" target="_blank">Ver más</a>
+    </div>
+    <div class="news-item col-12 col-md-6 col-lg-3">
+        <img src="https://techcrunch.com/wp-content/uploads/2021/09/Screen-Shot-2021-09-14-at-1.23.17-PM.jpg?w&#x3D;712" class="image"/>
+        <h2>Apple Watch will now detect biking workouts, falls from bike when riding</h2>
+        <p>Apple Watch users who ride bikes will get a handful of new features designed just for them. Announced during today’s Apple iPhone press event, the company says that Apple Watch will now begin to detect when users begin a bike ride to remind you to start a wor…</p>
+        <a href="http://techcrunch.com/2021/09/14/apple-watch-will-now-detect-biking-workouts-falls-from-bike-when-riding/" target="_blank">Ver más</a>
+    </div>
+</div>
+<script id="news-template" type="text/x-handlebars">
+    {{#each news}}
+    <div class="news-item col-12 col-md-6 col-lg-3">
+        <img src="{{this.urlToImage}}" class="image"/>
+        <h2>{{this.title}}</h2>
+        <p>{{this.description}}</p>
+        <a href="{{this.url}}" target="_blank" class="vermas">Ver más</a>
+    </div>
+    {{/each}}
+</script>
+<script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/handlebars@latest/dist/handlebars.js"></script>
+<script src="scripts/main.js" type="module"></script>
+</body>
+</html>
