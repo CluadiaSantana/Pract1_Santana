@@ -22,7 +22,7 @@ botsearch.addEventListener('click', function (e) {
             const resultHtml = template({
                 news: response.data.articles
             });
-            console.log(resultHtml);
+            //console.log(resultHtml)
             document.getElementById('news').innerHTML = resultHtml;
         });
     });
