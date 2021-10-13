@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ITESO NEWS APP</title>
+    <link rel="stylesheet" href="styles/styles.css">
+</head>
+<body>
+<section>
+    <h1 class="titletext">ITESO News App</h1>
+    <form >
+        <div >
+            <label for="searchbar"></label>
+            <input id="searchbar" class="form-control backbackPrimary" placeholder="SEARCH">
+            <button id="button-search">BUSCAR</button>
+        </div>
+    </form>
+    <h5 class="titletext">This project depends on <a class="nav-link" id="linknews" href="https://newsapi.org/" target="_blank"> News Api </a> a simple 
+        HTTP REST API for searching and retreiveing live articles from all over the web </h5>
+</section>
+<div id="news" class="grid " >
+    <h1  class="titletext">Ingresa tu búsqueda </h1>
+</div>
+<script id="news-template" type="text/x-handlebars">
+    {{#each news}}
+    <div class="news-item col-12 col-md-6 col-lg-3">
+        <img src="{{this.urlToImage}}" class="image"/>
+        <h2>{{this.title}}</h2>
+        <p>{{this.description}}</p>
+        <a href="{{this.url}}" target="_blank" class="vermas">Ver más</a>
+    </div>
+    {{/each}}
+</script>
+<script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/handlebars@latest/dist/handlebars.js"></script>
+<script src="scripts/main.js" type="module"></script>
+</body>
+</html>
